@@ -1,0 +1,30 @@
+.contenido {
+  background-color: gray;
+}
+
+.seccion {
+  margin-top: 20px;
+}
+
+.titulo {
+  font-size: 50px;
+  text-align: center;
+}
+
+.select1 {
+  margin-right: 100px;
+  width: 200px;
+}
+
+.select2 {
+  width: 200px;
+}
+
+.btn_buscar {
+  margin-left: 100px;
+}
+
+p {
+  font-size: 25px;
+  color: red;
+}

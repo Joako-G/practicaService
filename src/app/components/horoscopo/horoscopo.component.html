@@ -1,0 +1,38 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+  crossorigin="anonymous"
+/>
+<div class="container-fluid contenido">
+  <div class="row">
+    <div class="bg-primary titulo">Tarot</div>
+
+    <div class="col-md-8 offset-md-4 seccion">
+      <select class="select1" name="signo" [(ngModel)]="signo">
+        <option *ngFor="let sig of signos" [value]="sig">
+          {{ sig }}
+        </option>
+      </select>
+      <select class="select2" name="day" [(ngModel)]="day">
+        <option *ngFor="let day of days" [value]="day">
+          {{ day }}
+        </option>
+      </select>
+      <button class="btn btn-primary btn_buscar" (click)="obtenerHoroscopo()">
+        Buscar
+      </button>
+    </div>
+
+    <p>Rango Fechas: {{ this.horoscopo2.date_range }}</p>
+    <p>Fecha Actual: {{ this.horoscopo2.current_date }}</p>
+    <p>Descripcion: {{ this.horoscopo2.description }}</p>
+    <p>Color: {{ this.horoscopo2.color }}</p>
+  </div>
+</div>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"
+></script>
