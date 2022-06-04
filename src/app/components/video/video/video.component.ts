@@ -9,6 +9,7 @@ import { VideoService } from '../../../services/video.service';
 })
 export class VideoComponent implements OnInit {
   videos!: Array<Video>;
+  video!: Video;
 
   constructor(private videoService: VideoService) {
     this.getVideo();
@@ -20,7 +21,12 @@ export class VideoComponent implements OnInit {
     this.videoService.searchVideo('charly').subscribe((result) => {
       console.log(result);
       this.videos = new Array<Video>();
-      this.videos = result;
+      result['results'].forEach((element) => {
+        this.video = new Video();
+        Object.assign(this.video, element);
+        this.videos.push(this.video);
+      });
+      //this.videos = result;
       console.log(this.videos);
     });
   }

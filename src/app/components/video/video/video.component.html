@@ -13,8 +13,8 @@
       <th scope="col">Canal Youtube</th>
     </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="let vid of videos">
+  <tbody *ngFor="let vid of videos">
+    <tr>
       <td>{{ vid.id }}</td>
       <td>{{ vid.title }}</td>
       <td>{{ vid.url }}</td>
